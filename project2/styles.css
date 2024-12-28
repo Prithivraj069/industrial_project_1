@@ -1,0 +1,88 @@
+body {
+   margin: 0;
+   padding: 0;
+}
+
+@media screen and (min-width:768px) {
+   .carousel-item img {
+       max-height: 768px;
+       min-width: auto;
+      }
+   #top-wrapper {
+       position: relative;
+   }
+   
+   #call-action {
+       position: absolute;
+       bottom:20%;
+       right: 5%;
+       opacity: 0.75;
+   }
+
+   .action-content1 {
+       background-color: #ea3737;
+       border-radius: 50px 20px;
+   }
+   .action-content2 {
+       background-color: rgb(227, 223, 223);
+       border-radius: 50px 20px;
+   }
+   .action-content3 {
+       background-color: rgb(184, 235, 219);
+       border-radius: 50px 20px;
+   }
+
+   .action-content1:hover, .action-content2:hover, .action-content3:hover {
+       transform: scale(1.2);
+       width: 800px;
+     }
+
+     .link-cards {
+       margin-top: 9rem !important;
+       margin-bottom: 9rem !important;
+     }
+
+}
+
+@media screen and (max-width:576px) {
+
+   .sectionPart {
+       flex-wrap: wrap;
+   }
+}
+
+#navbarSticky{
+   position: sticky;
+   top: 0;
+   bottom: 0;
+   z-index: 2000;
+}
+
+#brand-logo {
+   position: relative;
+ animation: mymove 3s;
+ animation-iteration-count:infinite ;
+}
+
+.medicine-card img {
+   width: 60px;
+   height: 60px;
+}
+
+.medicine-card:hover {
+   background-color:#696e96;
+}
+
+@media screen and (min-width:992px) {
+   .navbar-flex {
+       display: flex;
+       justify-content: space-between;
+   }
+   
+}
+
+@media screen and (max-width:992px) {
+   .search-input {
+       display: none;
+   }
+}

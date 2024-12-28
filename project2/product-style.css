@@ -1,0 +1,29 @@
+.medicine-card {
+    flex: 1 1 30%; /* flex-grow: 1; flex-shrink: 1; flex-basis: 30%; */
+    max-width: 30%;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .medicine-card .card-body {
+    flex-grow: 1; /* Allows the content to grow and take available space */
+  }
+
+  .medicine-card-footer {
+    flex-shrink: 0; 
+  }
+
+  @media (max-width: 768px) {
+    .medicine-card {
+      flex-basis: 45%; /* Adjusts for medium screens */
+      max-width: 45%;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .medicine-card {
+      flex-basis: 100%; /* Stacks cards on smaller screens */
+      max-width: 100%;
+    }
+  }
