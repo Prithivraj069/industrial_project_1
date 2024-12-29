@@ -29,7 +29,7 @@ async function showData(todoData) {
         <td>${todoData[i].material}</td>
         <td>${todoData[i].quantity}</td>
         <td>${todoData[i].days}</td>
-        <td><button type="button" class="btn btn-dark" id="edit-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button></td>
+        <td><button type="button" class="btn btn-dark" id="edit-btn" data-bs-toggle="modal" data-bs-target="#editCustomerModal">Edit</button></td>
          <td><button type="button" class="btn btn-danger" id="delete-btn">Delete</button></td>
     `;
     tblBody.appendChild(row);
@@ -116,7 +116,35 @@ function createNewCustomer(data) {
    let allInputs = document.querySelectorAll('input');
    allInputs.forEach(singleInput => singleInput.value = '');
   });
+
+  const input = document.querySelector('input[type="search"]');
+
+  input.addEventListener("search", () => {
+    console.log(`The term searched for was ${input.value}`);
+    let filter = input.value.toUpperCase();
+    let table = document.querySelector("#table");
+    let tr = table.getElementsByTagName("tr");
+
+    for(let i=0; i < tr.length; i++) {
+      let td = tr[i].getElementsByTagName("td")[0];
+      if(td) {
+        let txtValue = td.textContent || td.innerText;
+        if(txtValue.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+
+  });
 }
+
+
+
+
+
+
 
 
 

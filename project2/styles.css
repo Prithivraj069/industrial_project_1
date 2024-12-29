@@ -86,3 +86,7 @@ body {
        display: none;
    }
 }
+
+#addBtn {
+    display: flex;
+}
